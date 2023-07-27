@@ -1,0 +1,38 @@
+##Чтобы установить OpenJDK 8, выполните следующие команды:
+
+    sudo apt update
+    sudo apt install openjdk-8-jdk
+
+##После этого выполните приведенные ниже команды, чтобы распечатать установленную версию Java:
+
+    java -version
+
+##Вы должны увидеть подобное содержимое, как показано ниже:
+
+    openjdk version "1.8.0_181"
+    OpenJDK Runtime Environment (build 1.8.0_181-8u181-b13-0ubuntu0.18.04.1-b13)
+    OpenJDK 64-Bit Server VM (build 25.181-b13, mixed mode)
+
+##Шаг 2установите Gradle
+
+    cd /tmp
+    wget https://services.gradle.org/distributions/gradle-7.3.3-bin.zip
+
+##После этого извлеките содержимое в каталог /opt
+
+    sudo unzip -d /opt/gradle /tmp/gradle-*.zip
+
+    sudo nano /etc/profile.d/gradle.sh
+
+##Они копируют и вставляют строки ниже в файл и сохраняют.
+
+    export GRADLE_HOME=/opt/gradle/gradle-4.10.2
+    export PATH=${GRADLE_HOME}/bin:${PATH}
+
+##Когда вы закончите, выполните следующие команды, чтобы сделать файл исполняемым:
+
+    sudo chmod +x /etc/profile.d/gradle.sh
+    source /etc/profile.d/gradle.sh
+
+
+    gradle -v
