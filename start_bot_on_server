@@ -44,3 +44,6 @@ gradle.properties
 >>
 org.gradle.daemon=false
 org.gradle.jvmargs=-XX:MaxPermSize=4096m -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8
+
+# Запуск 
+        java -jar secretEvilDesk-0.0.1-SNAPSHOT.jar
