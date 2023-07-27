@@ -1,0 +1,39 @@
+#Обновление окружения 
+
+    sudo apt update
+    sudo apt upgrade
+    sudo apt install snapd
+
+Установка компилятора Kotlin на Ubuntu 20.04.
+
+    sudo snap install kotlin --classic
+
+Установить 17 джаву на Ubuntu
+
+    sudo apt install openjdk-17-jdk
+    sudo apt install openjdk-17-jre
+
+     java --version
+
+Клонирование проекта
+
+    git clone git@github.com:booogiman/SecretEvilDesk.git
+
+Сборка проекта
+
+    bash ./gradlew clean build
+
+#Работа с демонами
+#Перед сборкой задачи.
+
+    ./gradlew --status
+#проверить статус демона.
+
+#Затем
+
+      ./gradlew --stop
+#чтобы остановить демона.
+
+#Использовать
+
+    ./gradlew assemblerelease  --no-daemon -Dkotlin.compiler.execution.strategy="in-process"
